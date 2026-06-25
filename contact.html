@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Oceanview Auto</title>
+    <meta name="description" content="Request a vehicle from Oceanview Auto.">
+    <link rel="icon" href="assets/oceanview-favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;750;850&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Oceanview Auto home"><img src="assets/oceanview-logo.svg" alt="Oceanview Auto"></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="vehicles.html">Vehicles</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero" style="--page-image: url('../assets/vehicles/contact-meeting.jpg');">
+        <div class="page-title">
+          <p class="eyebrow">Contact</p>
+          <h1>Request a vehicle today.</h1>
+          <p>Share the target model, color, configuration, budget, and delivery location. Oceanview will review available vehicle supply from North America and next steps.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="contact-grid">
+          <aside class="contact-panel">
+            <p class="eyebrow">OCEANVIEW AUTO</p>
+            <h2>Vehicle sourcing from North America for global buyers.</h2>
+            <p>Email: <a href="mailto:sales@oceanviewauto.com">sales@oceanviewauto.com</a></p>
+            <p>Include the target model, trim, color, configuration, budget, preferred delivery location, and whether Canada-only inventory is required. When a suitable unit is available, Oceanview sends vehicle photos, VIN, build date, price, and offer details.</p>
+          </aside>
+          <form class="contact-form" action="mailto:sales@oceanviewauto.com" method="post" enctype="text/plain">
+            <div class="field"><label for="name">Name</label><input id="name" name="Name" autocomplete="name" required></div>
+            <div class="field"><label for="company">Company</label><input id="company" name="Company" autocomplete="organization"></div>
+            <div class="field"><label for="country">Country</label><input id="country" name="Country" autocomplete="country-name" required></div>
+            <div class="field"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="WhatsApp" autocomplete="tel"></div>
+            <div class="field full"><label for="vehicle-request">Target Vehicle</label><textarea id="vehicle-request" name="Target Vehicle" placeholder="Model, trim, color, package, budget, timing, and any Canada-only requirement"></textarea></div>
+            <div class="field"><label for="budget">Budget</label><input id="budget" name="Budget" placeholder="Target price or range"></div>
+            <div class="field"><label for="delivery">Preferred Delivery Location</label><input id="delivery" name="Preferred Delivery Location" placeholder="City, country, port, or warehouse"></div>
+            <div class="field full"><button class="btn btn-primary" type="submit">Submit Request</button></div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div><img src="assets/oceanview-logo.svg" alt="Oceanview Auto"><p>Oceanview Auto sources North American vehicles for global buyers.</p></div>
+        <div class="footer-links"><a href="index.html">Home</a><a href="vehicles.html">Vehicles</a><a href="how-it-works.html">How It Works</a></div>
+      </div>
+    </footer>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

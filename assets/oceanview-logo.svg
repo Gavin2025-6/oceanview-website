@@ -1,0 +1,16 @@
+<svg width="330" height="58" viewBox="0 0 330 58" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Oceanview Auto</title>
+  <desc id="desc">Horizontal Oceanview Auto logo with an OV monogram and wave line.</desc>
+  <g aria-hidden="true">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M30 6C17 6 6.5 16.3 6.5 29S17 52 30 52c13 0 23.5-10.3 23.5-23S43 6 30 6Zm0 10.3c-7.2 0-13 5.7-13 12.7s5.8 12.7 13 12.7S43 36 43 29s-5.8-12.7-13-12.7Z" fill="#0A1D3D"/>
+    <path d="M55.2 31.3H66.3L73.8 42.8L91.5 6H103.2L79 52H67.5L55.2 31.3Z" fill="#1D73B8"/>
+    <path d="M23.7 38.8C35 24.3 48.5 20.9 64.4 26.8C77.2 31.5 89.9 25.9 104.1 11.4C96 27.8 81.9 39.6 64.3 34C51.3 29.9 39.6 31.2 27.2 41.4L23.7 38.8Z" fill="#FFFFFF"/>
+    <path d="M26.7 36.8C37 25.2 49.2 23.2 63.8 28.1C76 32.2 88.1 27.8 101.5 14C92.6 26.8 79.9 36.2 64.2 31.9C51 28.3 39.3 29.5 28.1 38.8L26.7 36.8Z" fill="#1D73B8"/>
+  </g>
+  <g aria-hidden="true">
+    <text x="111" y="28" fill="#0A1D3D" font-family="Inter, Montserrat, Poppins, Arial, sans-serif" font-size="21" font-weight="850" letter-spacing="2.2">OCEANVIEW</text>
+    <path d="M112 42H153" stroke="#1D73B8" stroke-width="2"/>
+    <text x="164" y="47" fill="#1D73B8" font-family="Inter, Montserrat, Poppins, Arial, sans-serif" font-size="14" font-weight="850" letter-spacing="5.2">AUTO</text>
+    <path d="M226 42H267" stroke="#1D73B8" stroke-width="2"/>
+  </g>
+</svg>
