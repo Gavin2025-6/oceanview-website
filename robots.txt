@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oceanviewauto.com/sitemap.xml
