@@ -36,6 +36,12 @@ function canonicalPath(urlPath) {
   return urlPath;
 }
 
+function htmlFileForCleanPath(urlPath) {
+  if (urlPath === "/" || path.extname(urlPath)) return "";
+  const candidate = safePath(`${urlPath}.html`);
+  return fs.existsSync(candidate) ? candidate : "";
+}
+
 http.createServer((req, res) => {
   const host = String(req.headers.host || "").split(":")[0].toLowerCase();
   const url = new URL(req.url || "/", `https://${canonicalHost}`);
@@ -52,6 +58,15 @@ http.createServer((req, res) => {
   if (url.pathname === "/index.html") {
     send(res, 301, {
       Location: "/",
+      "Cache-Control": "public, max-age=3600",
+    });
+    return;
+  }
+
+  const cleanHtmlFile = htmlFileForCleanPath(url.pathname);
+  if (cleanHtmlFile) {
+    send(res, 301, {
+      Location: `${url.pathname}.html${url.search}`,
       "Cache-Control": "public, max-age=3600",
     });
     return;
