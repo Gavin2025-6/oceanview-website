@@ -33,6 +33,7 @@ function safePath(urlPath) {
 
 function canonicalPath(urlPath) {
   if (urlPath === "/index.html") return "/";
+  if (urlPath.endsWith(".html")) return urlPath.slice(0, -5);
   return urlPath;
 }
 
@@ -55,9 +56,9 @@ http.createServer((req, res) => {
     return;
   }
 
-  if (url.pathname === "/index.html") {
+  if (url.pathname === "/index.html" || (url.pathname.endsWith(".html") && url.pathname !== "/index.html")) {
     send(res, 301, {
-      Location: "/",
+      Location: `${cleanPath}${url.search}`,
       "Cache-Control": "public, max-age=3600",
     });
     return;
@@ -65,9 +66,15 @@ http.createServer((req, res) => {
 
   const cleanHtmlFile = htmlFileForCleanPath(url.pathname);
   if (cleanHtmlFile) {
-    send(res, 301, {
-      Location: `${url.pathname}.html${url.search}`,
-      "Cache-Control": "public, max-age=3600",
+    fs.readFile(cleanHtmlFile, (error, data) => {
+      if (error) {
+        send(res, 404, { "Content-Type": "text/plain; charset=utf-8" }, "404 Not Found");
+        return;
+      }
+      send(res, 200, {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+      }, data);
     });
     return;
   }
