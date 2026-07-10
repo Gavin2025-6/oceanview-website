@@ -800,6 +800,12 @@ textarea {
 .footer-inner {
   max-width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-top {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 24px;
@@ -816,6 +822,29 @@ textarea {
   flex-wrap: wrap;
   gap: 18px;
   font-weight: 700;
+}
+
+.footer-legal {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-legal p + p {
+  margin-top: 8px;
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-legal a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .whatsapp-float {
@@ -921,7 +950,7 @@ textarea {
   .prepared-grid,
   .request-list,
   .contact-form,
-  .footer-inner {
+  .footer-top {
     grid-template-columns: 1fr;
   }
 
